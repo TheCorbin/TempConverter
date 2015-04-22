@@ -28,4 +28,8 @@ public class CelsiusToKelvin implements ConverterStrategy{
         return "Kelvin";
     }
     
+    @Override
+    public String starter(){
+        return "Celsius";
+    }
 }

@@ -28,4 +28,9 @@ public class FarenheitToCelsius implements ConverterStrategy {
     public String oppisite() { 
         return "Celsius";
     }
+    
+    @Override
+    public String starter(){
+        return "Farenheit";
+    }
 }

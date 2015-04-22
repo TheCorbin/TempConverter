@@ -21,35 +21,28 @@ public class TempConverterService {
         setDegreeScales(degreeScales);
     }
 
-    public Vector<String> getDegreeScales() {
+    /**
+     * Getter method for the vector of converter strategies
+     * @return 
+     */
+    public final Vector<String> getDegreeScales() {
         return degreeScales;
     }
     
-//    public Vector<String> getOthers(String state) {
-//        System.out.println(state);
-//        setDegreeScales(degreeScales);
-//        System.out.println(degreeScales.toString());
-//        int itemIndex = -1;
-//        
-//        for (String x: degreeScales){
-//            if(x == state){
-//                itemIndex = x.indexOf(x);
-//            }
-//        }
-//       Vector<String> degreeRemoved = degreeScales;
-//       String Removed = degreeRemoved.remove(itemIndex);
-//       System.out.println(degreeRemoved.toString());
-//       return degreeRemoved;
-//    }
-    
-    public void setDegreeScales(Vector degreeScales){
-    degreeScales.clear();
-    degreeScales.add(new CelsiusToFarenheit());
-    degreeScales.add(new CelsiusToKelvin());
-    degreeScales.add(new FarenheitToCelsius());
-    degreeScales.add(new FarenheitToKelvin());
-    degreeScales.add(new KelvinToFarenheit());
-    degreeScales.add(new KelvinToCelsius());
+    /**
+     * Sets all of the different strategy objects in the program.  If we want to
+     * add another strategy we would do it here.
+     * @param degreeScales - The hopefully empty vector into which the conversion
+     * strategy objects will be placed.
+     */
+    private final void setDegreeScales(Vector degreeScales){
+        degreeScales.clear();
+        degreeScales.add(new CelsiusToFarenheit());
+        degreeScales.add(new CelsiusToKelvin());
+        degreeScales.add(new FarenheitToCelsius());
+        degreeScales.add(new FarenheitToKelvin());
+        degreeScales.add(new KelvinToFarenheit());
+        degreeScales.add(new KelvinToCelsius());
     }
     
 }

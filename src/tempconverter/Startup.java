@@ -18,6 +18,8 @@ public class Startup {
             + "unavailable. Using default instead.";
 
     /**
+     * Creates a GUI with the system look and feel.  Throws a JOptionPane if it can't
+     * find it.
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -26,17 +28,12 @@ public class Startup {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e){
             JOptionPane.showMessageDialog(null, ERROR_WINDOW_TITLE,
-                    UNAVAILABLE_ERROR, JOptionPane.ERROR_MESSAGE);
-            
+                    UNAVAILABLE_ERROR, JOptionPane.ERROR_MESSAGE);     
         }
         
         java.awt.EventQueue.invokeLater(() -> {
             new TempConverterGui().setVisible(true);
         });
-        
-        
-        
-        // TODO code application logic here
     }
     
 }

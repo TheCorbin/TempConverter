@@ -13,6 +13,7 @@ public interface ConverterStrategy {
     public double getConverted(double degrees);
     
     public String toString();
-    
+    public String starter();
     public String oppisite();
+    
 }

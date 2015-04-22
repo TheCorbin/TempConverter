@@ -29,4 +29,10 @@ public class KelvinToFarenheit implements ConverterStrategy{
         return "Farenheit";
     }
     
+    @Override
+    public String starter(){
+        return "Kelvin";
+    }
+    
+    
 }

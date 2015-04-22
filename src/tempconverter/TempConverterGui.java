@@ -36,22 +36,22 @@ public class TempConverterGui extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
+        fromTextField = new javax.swing.JTextField();
         title = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new JComboBox(servicer.getDegreeScales());
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        convertResultLabel = new javax.swing.JLabel();
+        scalePicker = new JComboBox(servicer.getDegreeScales());
+        convertToLabel = new javax.swing.JLabel();
+        quitButton = new javax.swing.JButton();
+        convertButton = new javax.swing.JButton();
+        convertFromLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jTextField1.setText("0");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        fromTextField.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        fromTextField.setText("0");
+        fromTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                fromTextFieldActionPerformed(evt);
             }
         });
 
@@ -59,36 +59,36 @@ public class TempConverterGui extends javax.swing.JFrame {
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("Temperature Converter");
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel2.setText("0 Degrees");
+        convertResultLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        convertResultLabel.setText("0 Degrees");
 
-        jComboBox1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        scalePicker.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        scalePicker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                scalePickerActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel1.setText("Farenheit");
+        convertToLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        convertToLabel.setText("Farenheit");
 
-        jButton1.setText("Quit");
-        jButton1.setToolTipText("");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        quitButton.setText("Quit");
+        quitButton.setToolTipText("");
+        quitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                quitButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Convert");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        convertButton.setText("Convert");
+        convertButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                convertButtonActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel3.setText("Celsius");
+        convertFromLabel.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        convertFromLabel.setText("Celsius");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,20 +99,20 @@ public class TempConverterGui extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jButton1))
+                            .addComponent(convertToLabel)
+                            .addComponent(convertFromLabel)
+                            .addComponent(quitButton))
                         .addGap(78, 78, 78)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(convertButton)
+                            .addComponent(fromTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(convertResultLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(107, 107, 107)
                         .addComponent(title))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(183, 183, 183)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(scalePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -121,19 +121,19 @@ public class TempConverterGui extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addComponent(title)
                 .addGap(17, 17, 17)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scalePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(fromTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(convertFromLabel))
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                    .addComponent(convertResultLabel)
+                    .addComponent(convertToLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(quitButton)
+                    .addComponent(convertButton))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -146,12 +146,12 @@ public class TempConverterGui extends javax.swing.JFrame {
     * @param evt 
     */ 
     
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        ConverterStrategy current = (ConverterStrategy)jComboBox1.getSelectedItem();
-        jLabel3.setText(current.starter());
-        jLabel1.setText(current.oppisite());
-        jTextField1ActionPerformed(evt);
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void scalePickerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scalePickerActionPerformed
+        ConverterStrategy current = (ConverterStrategy)scalePicker.getSelectedItem();
+        convertFromLabel.setText(current.starter());
+        convertToLabel.setText(current.oppisite());
+        fromTextFieldActionPerformed(evt);
+    }//GEN-LAST:event_scalePickerActionPerformed
 
     /**
      * After entering a number in the text box and pressing enter this function should
@@ -160,17 +160,17 @@ public class TempConverterGui extends javax.swing.JFrame {
      */
     
     
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        jButton2ActionPerformed(evt);
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void fromTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromTextFieldActionPerformed
+        convertButtonActionPerformed(evt);
+    }//GEN-LAST:event_fromTextFieldActionPerformed
 
     /**
      * Quits the program when activated.
      * @param evt 
      */
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void quitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitButtonActionPerformed
         quitProgram(evt);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_quitButtonActionPerformed
 
     /**
      * Pulls the textField input and ConverterStrategy and performs the calculation
@@ -178,17 +178,17 @@ public class TempConverterGui extends javax.swing.JFrame {
      * @param evt 
      */
     
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void convertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButtonActionPerformed
         try{
-           Double incomingDegrees = Double.parseDouble(jTextField1.getText());
-           ConverterStrategy current = (ConverterStrategy)jComboBox1.getSelectedItem();
+           Double incomingDegrees = Double.parseDouble(fromTextField.getText());
+           ConverterStrategy current = (ConverterStrategy)scalePicker.getSelectedItem();
            Double outGoingDegrees = current.getConverted(incomingDegrees);
            String result = String.format("%.2f", outGoingDegrees);
-           jLabel2.setText(result + " Degrees");   
+           convertResultLabel.setText(result + " Degrees");   
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, "Invalid Entry. Please Enter a Number.");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_convertButtonActionPerformed
 
     /**
      * The method that is called from the button method.  Quits the program.
@@ -235,13 +235,13 @@ public class TempConverterGui extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton convertButton;
+    private javax.swing.JLabel convertFromLabel;
+    private javax.swing.JLabel convertResultLabel;
+    private javax.swing.JLabel convertToLabel;
+    private javax.swing.JTextField fromTextField;
+    private javax.swing.JButton quitButton;
+    private javax.swing.JComboBox scalePicker;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
